@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cyber Sentinel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-box h2 {
+            color: #4CAF50;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #4CAF50;
+            outline: none;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .login-box button:hover {
+            background: #45a049;
+        }
+    </style>
+    <script>
+        function login() {
+            // Simulate a successful login
+            sessionStorage.setItem('loggedIn', 'true'); // Save login state
+            window.location.href = 'dashboard.html';   // Redirect to the dashboard
+        }
+    </script>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form onsubmit="event.preventDefault(); login();">
+            <input type="text" placeholder="User ID" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
